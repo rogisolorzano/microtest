@@ -17,7 +17,7 @@ You'll need:
 
 Clone this repo and run `make tests`
 
-You can reference `example.test.py` and the `Makefile` in this repo for tips on
+You can reference `examples.test.py` and the `Makefile` in this repo for tips on
 running tests with the `micropython` binary.
 
 I'm also using microtest in [microqueue](https://github.com/rogisolorzano/microqueue)
