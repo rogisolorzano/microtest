@@ -76,10 +76,10 @@ async def test_runner(functions):
 
     try:
       await test_function()
-      print('PASS', name)
+      print('> PASS', name)
       passed += 1
     except Exception as e:
-      print('FAIL', name)
+      print('> FAIL', name)
       print(e)
       failed += 1
   
