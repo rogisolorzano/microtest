@@ -65,7 +65,9 @@ def expect(value):
     return Expect(value)
 
 async def test(*functions):
-  print('------------------------------------------------')
+  print('\n------------------------------------------------')
+  passed = 0
+  failed = 0
 
   for test_function in functions:
     name = test_function.__name__.replace("_", " ")
@@ -73,8 +75,13 @@ async def test(*functions):
     try:
       await test_function()
       print('PASS', name)
+      passed += 1
     except Exception as e:
       print('FAIL', name)
       print(e)
+      failed += 1
   
-  print('------------------------------------------------')
+  print('\nSummary')
+  print('-----------')
+  print('Passed: {}'.format(passed))
+  print('Failed: {}\n'.format(failed))

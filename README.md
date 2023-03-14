@@ -2,7 +2,11 @@
 
 Dead simple async unit test suite for micropython.
 
-Work in progress. Mainly using it on things I'm building for fun and adding to it as needed.
+![tests image](docs/tests.png)
+
+This is a work in progress. Mainly using it on side projects and adding to it as needed.
+I started this because I wanted to actually run my tests with `micropython` instead
+of `python` for more reliability.
 
 ## Usage
 Just copy `microtest.py` over to wherever you're using it.
@@ -15,3 +19,5 @@ Clone this repo and run `make tests`
 
 You can reference `example.test.py` and the `Makefile` in this repo for tips on
 running tests with the `micropython` binary.
+
+I'm also using microtest in [microqueue](https://github.com/rogisolorzano/microqueue)
