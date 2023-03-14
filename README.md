@@ -6,7 +6,7 @@ Dead simple async unit test suite for micropython.
 
 This is a work in progress. Mainly using it on side projects and adding to it as needed.
 I started this because I wanted to actually run my tests with `micropython` instead
-of `python` for more reliability.
+of `python` for more consistency with the environment where the code runs.
 
 ## Usage
 Just copy `microtest.py` over to wherever you're using it.
