@@ -35,6 +35,16 @@ async def spies_should_be_called_with_args():
   expect(spy_two).it_not.to_have_been_called_with(10)
 
 @test
+async def spies_should_handle_keyword_args():
+  spy_one = spy()
+  spy_two = spy()
+  spy_one(example = True, timeout = 10)
+  spy_one(example = False, timeout = 30)
+  spy_two(1, param = 2)
+  expect(spy_one).to_have_been_called_with(example = True, timeout = 10)
+  expect(spy_two).to_have_been_called_with(1, param = 2)
+
+@test
 async def spy_should_return_value_that_was_set():
   spy_one = spy().returns(10)
   expect(spy_one()).to_be(10)
