@@ -18,9 +18,11 @@ expect([1, 's', ('tuple'), {"a": 1}]).to_be([1, 's', ('tuple'), {"a": 1}])
 expect([{"a": 1}]).it_not.to_be([{"a": 2}])
 ```
 
-Spies - asserting on function call parameters (including support for keyword arguments)
+Spies - asserting on function calls (including support for keyword arguments)
 ```
-  expect(spy_one).to_have_been_called_with(1)
+  expect(spy_one).to_have_been_called()
+  expect(spy_one).to_have_been_called_times(2)
+  expect(spy_one).to_have_been_called_with('foo')
   expect(spy_two).to_have_been_called_with(1, param = 2)
 ```
 
