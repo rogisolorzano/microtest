@@ -86,6 +86,13 @@ async def test_should_await():
   expect(await job()).to_be('it works!')
 ```
 
+Convenience `@only` decorator for running specific tests during development
+```
+@only
+async def one_and_one_should_be_added():
+  expect(1 + 1).to_be(2)
+```
+
 See `examples.test.py` for full examples.
 
 ## Usage
