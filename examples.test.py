@@ -117,7 +117,6 @@ async def it_should_mock_network_module():
 
   expect(network_mock.hostname).to_have_been_called_times(1)
 
-
 class MockPublisher:
   def __init__(self):
     self.publish = async_spy()
